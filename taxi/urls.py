@@ -55,4 +55,3 @@ urlpatterns = [
         "drivers/<int:pk>/", DriverDetailView.as_view(), name="driver-detail"
     ),
 ]
-
