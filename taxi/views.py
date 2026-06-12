@@ -38,11 +38,13 @@ class ManufacturerCreateView(generic.CreateView):
     model = Manufacturer
     form_class = ManufacturerForm
     template_name = "taxi/manufacturer_form.html"
+    success_url = reverse_lazy("taxi:manufacturer-list")
 
 
 class ManufacturerUpdateView(generic.UpdateView):
     model = Manufacturer
     form_class = ManufacturerForm
+    success_url = reverse_lazy("taxi:manufacturer-list")
 
 
 class ManufacturerDeleteView(generic.DeleteView):
@@ -65,12 +67,14 @@ class CarCreateView(generic.CreateView):
     model = Car
     form_class = CarForm
     template_name = "taxi/car_form.html"
+    success_url = reverse_lazy("taxi:car-list")
 
 
 class CarUpdateView(generic.UpdateView):
     model = Car
     form_class = CarForm
     template_name = "taxi/car_form.html"
+    success_url = reverse_lazy("taxi:car-list")
 
 
 class CarDeleteView(generic.DeleteView):
