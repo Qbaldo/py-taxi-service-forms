@@ -31,8 +31,6 @@ def index(request):
 
 class ManufacturerListView(LoginRequiredMixin, generic.ListView):
     model = Manufacturer
-    context_object_name = "manufacturer_list"
-    template_name = "taxi/manufacturer_list.html"
     paginate_by = 5
 
 
@@ -46,13 +44,12 @@ class ManufacturerUpdateView(generic.UpdateView):
     model = Manufacturer
     form_class = ManufacturerForm
 
-    def get_success_url(self):
-        return reverse("taxi:manufacturer-list")
+
 
 
 class ManufacturerDeleteView(generic.DeleteView):
     model = Manufacturer
-    template_name = "taxi/Manufacturer_confirm_delete.html"
+    template_name = "taxi/manufacturer_confirm_delete.html"
     success_url = reverse_lazy("taxi:manufacturer-list")
 
 
