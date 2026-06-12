@@ -45,8 +45,6 @@ class ManufacturerUpdateView(generic.UpdateView):
     form_class = ManufacturerForm
 
 
-
-
 class ManufacturerDeleteView(generic.DeleteView):
     model = Manufacturer
     template_name = "taxi/manufacturer_confirm_delete.html"
